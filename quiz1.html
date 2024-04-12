@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <!--============= Icon Link========= -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <script src="https://kit.fontawesome.com/348356cdb0.js" crossorigin="anonymous"></script>
+    <!--============= Icon Link========= -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/responsive.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .filled-placeholder {
+            border: none;
+        }
+
+        .unfilled-placeholder {
+            border: 2px dashed #ccc;
+        }
+
+        /* SVG container for drawing lines */
+        #svgContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            /* Allows clicking through the SVG container */
+            z-index: 10;
+            /* Ensure it's above other content but below the interactive elements */
+        }
+
+        /* SVG line style */
+        .connectionLine {
+            stroke: rgb(255, 81, 0);
+            stroke-width: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing HTML structure -->
+    <!-- Add an SVG container for drawing lines -->
+    <svg id="svgContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></svg>
+
+    <div class="video-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <div class="video-header-logo">
+                        <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="quiz-header">
+                        <p>CONSTRUCTION OF BINARY TREE FROM PREORDER AND INORDER TRAVERSAL SEQUENCE</p>
+
+                        <div class="preorder-area">
+                            <ul>
+                                <li class="title-preorder">Preorder</li>
+                                <li class="sub-title">A</li>
+                                <li class="sub-title">B</li>
+                                <li class="sub-title">D</li>
+                                <li class="sub-title">G</li>
+                                <li class="sub-title">C</li>
+                                <li class="sub-title">E</li>
+                                <li class="sub-title">H</li>
+                                <li class="sub-title">I</li>
+                                <li class="sub-title">F</li>
+                            </ul>
+                        </div>
+                        <div class="inorder-area">
+                            <ul>
+                                <li class="title-preorder">Inorder</li>
+                                <li class="sub-title">D</li>
+                                <li class="sub-title">G</li>
+                                <li class="sub-title">B</li>
+                                <li class="sub-title">A</li>
+                                <li class="sub-title">H</li>
+                                <li class="sub-title">E</li>
+                                <li class="sub-title">I</li>
+                                <li class="sub-title">C</li>
+                                <li class="sub-title">F</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="words-area">
+        <div class="">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="chain-area" style="position: relative;">
+                        <div id="chain1" class="unfilled-placeholder"
+                            style="position: absolute; width: 140px; height: 140px; left: 650px; display: flex; justify-content: center;">
+                            1<!-- A<img src="assets/images/chain-img/a-img.png" alt=""> -->
+                        </div>
+                        <div id="chain2" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 300px; top: 60px; display: flex; justify-content: center;">
+                            2<!-- B<img src="assets/images/chain-img/b-img.png" alt=""> -->
+                        </div>
+                        <div id="chain3" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 1020px; top: 60px; display: flex; justify-content: center;">
+                            3<!-- C<img src="assets/images/chain-img/c-img.png" alt=""> -->
+                        </div>
+                        <div id="chain4" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 120px; top: 230px; display: flex; justify-content: center;">
+                            4<!-- D<img src="assets/images/chain-img/d-img.png" alt=""> -->
+                        </div>
+                        <div id="chain5" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 480px; top: 230px; display: flex; justify-content: center;">
+                            5<!-- M<img src="assets/images/chain-img/d-img.png" alt=""> -->
+                        </div>
+                        <div id="chain6" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 830px; top: 230px; display: flex; justify-content: center;">
+                            6<!-- E<img src="assets/images/chain-img/e-img.png" alt=""> -->
+                        </div>
+                        <div id="chain7" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 1200px; top: 230px; display: flex; justify-content: center;">
+                            7<!-- F<img src="assets/images/chain-img/f-img.png" alt=""> -->
+                        </div>
+                        <div id="chain8" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 200px; top: 400px; display: flex; justify-content: center;">
+                            8<!-- G<img src="assets/images/chain-img/g-img.png" alt=""> -->
+                        </div>
+                        <div id="chain9" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 45px; top: 400px; display: flex; justify-content: center;">
+                            9<!-- H<img src="assets/images/chain-img/h-img.png" alt=""> -->
+                        </div>
+                        <div id="chain10" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 400px; top: 400px; display: flex; justify-content: center;">
+                            10<!-- N<img src="assets/images/chain-img/g-img.png" alt=""> -->
+                        </div>
+                        <div id="chain11" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 560px; top: 400px; display: flex; justify-content: center;">
+                            11<!-- O<img src="assets/images/chain-img/h-img.png" alt=""> -->
+                        </div>
+                        <div id="chain12" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 750px; top: 400px; display: flex; justify-content: center;">
+                            12<!-- I<img src="assets/images/chain-img/i-img.png" alt=""> -->
+                        </div>
+                        <div id="chain13" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 900px; top: 400px; display: flex; justify-content: center;">
+                            13<!-- J<img src="assets/images/chain-img/i-img.png" alt=""> -->
+                        </div>
+                        <div id="chain14" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 1100px; top: 400px; display: flex; justify-content: center;">
+                            14<!-- K<img src="assets/images/chain-img/i-img.png" alt=""> -->
+                        </div>
+                        <div id="chain15" class=""
+                            style="position: absolute; width: 140px; height: 140px; left: 1250px; top: 400px; display: flex; justify-content: center;">
+                            15<!-- L<img src="assets/images/chain-img/i-img.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="words-imgs">
+                        <div class="img-1">
+                            <img src="assets/images/word-img/a.png" alt="" draggable="true" id="wordImgA">
+                        </div>
+                        <div class="img-2">
+                            <img src="assets/images/word-img/b.png" alt="" draggable="true" id="wordImgB">
+                        </div>
+                        <div class="img-3">
+                            <img src="assets/images/word-img/c.png" alt="" draggable="true" id="wordImgC">
+                        </div>
+                        <div class="img-4">
+                            <img src="assets/images/word-img/d.png" alt="" draggable="true" id="wordImgD">
+                        </div>
+                        <div class="img-5">
+                            <img src="assets/images/word-img/e.png" alt="" draggable="true" id="wordImgE">
+                        </div>
+                        <div class="img-6">
+                            <img src="assets/images/word-img/f.png" alt="" draggable="true" id="wordImgF">
+                        </div>
+                        <div class="img-7">
+                            <img src="assets/images/word-img/g.png" alt="" draggable="true" id="wordImgG">
+                        </div>
+                        <div class="img-8">
+                            <img src="assets/images/word-img/h.png" alt="" draggable="true" id="wordImgH">
+                        </div>
+                        <div class="img-9">
+                            <img src="assets/images/word-img/i.png" alt="" draggable="true" id="wordImgI">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="arrow-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="left-img">
+                        <a href="quiz-main.html"><img src="assets/images/left-side.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- <button id="btnNext" class="btn btn-primary">Check</button> -->
+                <div class="col-md-6" id="btnNext">
+                    <div class="right-img">
+                        <button style="background: transparent;"><img src="assets/images/right-side.png"
+                                alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center fs-4" id="resultMessage">
+                    <!-- Emoji and message will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set quizScore to 0 when the page loads
+            localStorage.setItem('quizScore', '0');
+
+            const wordImages = document.querySelectorAll('.words-imgs img');
+            const chainImages = document.querySelectorAll('.chain-area img');
+
+            wordImages.forEach((wordImg, index) => {
+                wordImg.addEventListener('click', function () {
+                    // Hide all chain images
+                    chainImages.forEach(img => img.classList.remove('active'));
+
+                    // Show corresponding chain image
+                    chainImages[index].classList.add('active');
+
+                    // Hide all word images
+                    wordImages.forEach(img => img.classList.remove('active'));
+
+                    // Show clicked word image
+                    this.classList.add('active');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            let dragged;
+            const parentChildMap = {
+                'chain1': ['chain2', 'chain3'],
+                'chain2': ['chain4', 'chain5'],
+                'chain4': ['chain8', 'chain9'],
+                'chain3': ['chain6', 'chain7'],
+                'chain6': ['chain13', 'chain12'],
+                'chain5': ['chain10', 'chain11'],
+                'chain7': ['chain14', 'chain15'],
+                // Add more mappings as necessary
+            };
+
+            function updateChildPlaceholders(parentId) {
+                // Check if the parentId has any children in the mapping
+                if (parentChildMap[parentId]) {
+                    // Iterate over each childId and update its class to unfilled-placeholder
+                    parentChildMap[parentId].forEach(childId => {
+                        const childPlaceholder = document.getElementById(childId);
+                        if (childPlaceholder) {
+                            childPlaceholder.classList.add('unfilled-placeholder');
+                        }
+                    });
+                }
+            }
+
+            // Handle the drag start event.
+            document.querySelectorAll('.words-imgs img').forEach(img => {
+                img.addEventListener('dragstart', function (event) {
+                    dragged = event.target; // Store the dragged element.
+                    event.dataTransfer.setData('text', event.target.id); 
+                });
+            });
+
+            // Highlight potential drop target when the draggable element enters it.
+            document.querySelectorAll('.chain-area div').forEach(div => {
+                div.addEventListener('dragover', function (event) {
+                    event.preventDefault(); // Allow the drop by preventing default handling.
+                    this.classList.add('over');
+                });
+
+                div.addEventListener('dragleave', function (event) {
+                    this.classList.remove('over');
+                });
+
+                // Handle the drop event.
+                div.addEventListener('drop', function (event) {
+                    event.preventDefault(); // Prevent default action.
+                    if (dragged) {
+                        this.innerHTML = ''; // Clear the container.
+                        this.appendChild(dragged.cloneNode(true)); // Append the dragged image.
+                        this.classList.remove('over');
+                        this.classList.remove('unfilled-placeholder');
+                        this.classList.add('filled-placeholder'); // Add class to indicate the placeholder is filled
+
+                        // Call updateChildPlaceholders for the current div's ID
+                        updateChildPlaceholders(this.id);
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let placementOrder = []; // To keep track of the images placed in order
+
+            document.getElementById('btnNext').addEventListener('click', () => {
+                // Check the order of images in placeholders
+                placementOrder = []; // Reset the array to check the current state
+                document.querySelectorAll('.chain-area div').forEach(div => {
+                    if (div.hasChildNodes()) {
+                        const childImgId = div.firstChild.id;
+                        placementOrder.push(childImgId);
+                    }
+                });
+
+                // Determine if the order is correct and show the modal with the appropriate message
+                const isCorrectOrder = arraysEqual(placementOrder, correctOrder);
+                const resultMessage = document.getElementById('resultMessage');
+                const modal = new bootstrap.Modal(document.getElementById('resultModal'));
+
+                if (isCorrectOrder) {
+                    resultMessage.innerHTML = `<span class="text-success">&#10004; Correct Order!</span>`;
+                    localStorage.setItem('quizScore', (parseInt(localStorage.getItem('quizScore') || '0') + 10).toString());
+                } else {
+                    resultMessage.innerHTML = `<span class="text-danger">&#10060; Incorrect Order.</span>`;
+                }
+
+                // Show the modal
+                modal.show();
+                setTimeout(() => {
+                    window.location.href = 'quiz2.html';
+                }, 2000);
+
+            });
+            // Utility function to compare two arrays
+            function arraysEqual(a, b) {
+                if (a.length !== b.length) return false;
+                for (let i = 0; i < a.length; i++) {
+                    if (a[i] !== b[i]) return false;
+                }
+                return true;
+            }
+
+            // Existing drag and drop logic here...
+        });
+
+        // Correct order of images (adjust this array to match your correct order)
+        const correctOrder = [
+            'wordImgA', //1
+            'wordImgB', //2
+            'wordImgC', //3
+            'wordImgD', //4
+            undefined, //5
+            'wordImgE', //6
+            'wordImgF', //7
+            'wordImgG', //8
+            undefined, //9
+            undefined, //10
+            undefined, //11
+            'wordImgH', //12
+            'wordImgI', //13
+            undefined, //14
+            undefined, //15
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to draw lines between filled placeholders
+            function drawLinesBetweenFilledPlaceholders() {
+                console.log('Drawing lines between filled placeholders')
+                const svgContainer = document.getElementById('svgContainer');
+                svgContainer.innerHTML = ''; // Clear existing lines
+                const svgNS = "http://www.w3.org/2000/svg";
+
+                // Define pairs of placeholders to connect
+                const pairsToConnect = [
+                    { from: 'chain1', to: 'chain2' },
+                    { from: 'chain1', to: 'chain3' },
+                    { from: 'chain2', to: 'chain4' },
+                    { from: 'chain2', to: 'chain5' },
+                    { from: 'chain4', to: 'chain8' },
+                    { from: 'chain4', to: 'chain9' },
+                    { from: 'chain3', to: 'chain6' },
+                    { from: 'chain3', to: 'chain7' },
+                    { from: 'chain7', to: 'chain14' },
+                    { from: 'chain7', to: 'chain15' },
+                    { from: 'chain6', to: 'chain13' },
+                    { from: 'chain6', to: 'chain12' },
+                    { from: 'chain5', to: 'chain10' },
+                    { from: 'chain5', to: 'chain11' },
+                    // Add more pairs as needed
+                ];
+
+                pairsToConnect.forEach(pair => {
+                    const fromElement = document.getElementById(pair.from);
+                    const toElement = document.getElementById(pair.to);
+
+                    // console.log(fromElement.classList.contains('filled-placeholder') && toElement.classList.contains('filled-placeholder'))
+
+                    // Check if both placeholders are filled
+                    if (fromElement.classList.contains('filled-placeholder') && toElement.classList.contains('filled-placeholder')) {
+
+                        const fromRect = fromElement.getBoundingClientRect();
+                        const toRect = toElement.getBoundingClientRect();
+
+                        // Calculate line start and end positions
+                        const startX = fromRect.left + fromRect.width / 2;
+                        const startY = fromRect.top + fromRect.height / 2 + window.scrollY;
+                        const endX = toRect.left + toRect.width / 2;
+                        const endY = toRect.top + toRect.height / 2 + window.scrollY;
+
+                        // Create an SVG line
+                        const line = document.createElementNS(svgNS, 'line');
+                        line.setAttribute('x1', startX);
+                        line.setAttribute('y1', startY);
+                        line.setAttribute('x2', endX);
+                        line.setAttribute('y2', endY);
+                        line.setAttribute('class', 'connectionLine');
+
+                        console.log(line)
+
+                        // Add the line to the SVG container
+                        svgContainer.appendChild(line);
+                    }
+                });
+            }
+
+            // Call drawLinesBetweenFilledPlaceholders whenever needed, e.g., after a successful drop
+            document.querySelectorAll('.chain-area div').forEach(div => {
+                div.addEventListener('drop', function () {
+                    // Existing drop handling code
+                    // After updating the placeholders:
+                    drawLinesBetweenFilledPlaceholders();
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
